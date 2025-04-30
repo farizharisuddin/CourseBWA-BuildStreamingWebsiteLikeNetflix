@@ -5,25 +5,33 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::middleware(['role:admin'])->group(function () {
-    Route::get('/admin/dashboard', function () {
-        return 'Admin Dashboard';
-    })->name('admin.dashboard');
-});
+// Route::middleware(['role:admin'])->group(function () {
+//     Route::get('/admin/dashboard', function () {
+//         return 'Admin Dashboard';
+//     })->name('admin.dashboard');
+// });
 
-Route::middleware(['role:user'])->group(function () {
-    Route::get('/user/dashboard', function () {
-        return 'user Dashboard';
-    })->name('user.dashboard');
-});
+// Route::middleware(['role:user'])->group(function () {
+//     Route::get('/user/dashboard', function () {
+//         return 'user Dashboard';
+//     })->name('user.dashboard');
+// });
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
+Route::redirect('/', '/login');
+
+Route::prefix('user')->group(function () {
+    Route::get('/login', function () {
+        return Inertia::render('Auth/Login');
+    })->name('user.login');
 });
 
 Route::get('/dashboard', function () {
