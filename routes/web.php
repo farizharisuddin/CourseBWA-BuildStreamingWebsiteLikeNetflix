@@ -28,10 +28,13 @@ use Inertia\Inertia;
 
 Route::redirect('/', '/login');
 
-Route::prefix('user')->group(function () {
+Route::prefix('custom')->group(function () {
     Route::get('/login', function () {
-        return Inertia::render('Auth/Login');
-    })->name('user.login');
+        return Inertia::render('Costumize/Login');
+    })->name('custom.login');
+    Route::get('/register', function () {
+        return Inertia::render('Costumize/Register');        
+    })->name('custom.register');
 });
 
 Route::get('/dashboard', function () {
