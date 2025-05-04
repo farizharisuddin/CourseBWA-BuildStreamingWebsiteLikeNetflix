@@ -30,10 +30,10 @@ export default function Login({ status, canResetPassword }) {
                     alt=""
                 />
             </div>
-            <div className="py-24 flex laptopLg:ml-[680px] laptopXl:ml-[870px]">
+            <div className="py-7 flex laptopLg:ml-[680px] laptopXl:ml-[870px]">
                 <div>
                     <img src="/images/moonton-white.svg" alt="" />
-                    <div className="my-[70px]">
+                    <div className="my-[30px]">
                         <div className="font-semibold text-[26px] mb-3">
                             Welcome Back
                         </div>
@@ -82,14 +82,21 @@ export default function Login({ status, canResetPassword }) {
                             </div>
                         </div>
                         <div className="grid space-y-[14px] mt-[30px]">
-                            <a
+                            {canResetPassword && (
+                                <Link
+                                    href={route("password.request")}
+                                    className="rounded-md text-sm text-gray-50 underline hover:text-gray-300 focus:outline-none "
+                                >
+                                    Forgot your password?
+                                </Link>
+                            )}
+                            <PrimaryButton
                                 href="/"
-                                className="rounded-2xl bg-alerange py-[13px] text-center"
                             >
                                 <span className="text-base font-semibold">
-                                    Start Watching
+                                    Log In
                                 </span>
-                            </a>
+                            </PrimaryButton>
                             <a
                                 href="sign_up.html"
                                 className="rounded-2xl border border-white py-[13px] text-center"
