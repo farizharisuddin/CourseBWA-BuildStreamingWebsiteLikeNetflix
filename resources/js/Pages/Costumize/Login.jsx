@@ -23,7 +23,7 @@ export default function Login({ status, canResetPassword }) {
 
     return (
         <>
-            <Head title="Login" />
+            <Head title="Sign In" />
             <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
                 <div className="fixed top-[-50px] hidden lg:block">
                     <img
@@ -57,7 +57,7 @@ export default function Login({ status, canResetPassword }) {
                                         name="email"
                                         placeholder="Email Address"
                                         value={data.email}
-                                        autoComplete="username"
+                                        autoComplete="email"
                                         isFocused={true}
                                         onChange={(e) =>
                                             setData("email", e.target.value)
@@ -75,7 +75,6 @@ export default function Login({ status, canResetPassword }) {
                                         name="password"
                                         placeholder="Password"
                                         value={data.password}
-                                        className="mt-1 block w-full"
                                         autoComplete="current-password"
                                         onChange={(e) =>
                                             setData("password", e.target.value)
@@ -94,7 +93,7 @@ export default function Login({ status, canResetPassword }) {
                                 )}
                                 <PrimaryButton>
                                     <span className="text-base font-semibold">
-                                        Log In
+                                        Sign In
                                     </span>
                                 </PrimaryButton>
                                 <Link
