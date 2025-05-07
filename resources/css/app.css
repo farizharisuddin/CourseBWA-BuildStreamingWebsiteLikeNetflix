@@ -4,6 +4,7 @@
 /* import new file component css */
 @import 'input.css';
 @import 'button.css';
+@import 'sidebar.css';
 
 .flex::before,
 .flex::after {

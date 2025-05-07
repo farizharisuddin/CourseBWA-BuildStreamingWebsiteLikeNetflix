@@ -97,6 +97,14 @@ export default function Login({ status, canResetPassword }) {
                                     </span>
                                 </PrimaryButton>
                                 <Link
+                                    href={route("custom.dashboard")}
+                                    className="rounded-2xl border border-white py-[13px] text-center"
+                                >
+                                    <span className="text-base text-white">
+                                        Dummy Sign In
+                                    </span>
+                                </Link>
+                                <Link
                                     href={route("custom.register")}
                                     className="rounded-2xl border border-white py-[13px] text-center"
                                 >

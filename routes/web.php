@@ -35,6 +35,9 @@ Route::prefix('custom')->group(function () {
     Route::get('/register', function () {
         return Inertia::render('Costumize/Register');        
     })->name('custom.register');
+    Route::get('/dashboard', function () {
+        return Inertia::render('Costumize/Dashboard');        
+    })->name('custom.dashboard');
 });
 
 Route::get('/dashboard', function () {
