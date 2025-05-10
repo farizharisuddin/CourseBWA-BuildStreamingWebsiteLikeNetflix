@@ -38,7 +38,7 @@ export default function Topbar() {
                         />
                     </div>
                     <div
-                        className="bg-gray-50 rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden"
+                        className="bg-gray-100 rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden"
                         ref={dropdownTarget}
                     >
                         <a
