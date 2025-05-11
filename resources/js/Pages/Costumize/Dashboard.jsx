@@ -21,7 +21,8 @@ export default function Dashboard() {
                     href="https://unpkg.com/flickity@2/dist/flickity.min.css"
                 />
             </Head>
-
+            {/* Start Main Body */}
+            
             {/* Start:Featured */}
             <div>
                 <div className="font-semibold text-[22px] text-black mb-4">
@@ -59,6 +60,8 @@ export default function Dashboard() {
                 </Flickity>
             </div>
             {/* End:Browse */}
+            
+            {/* End Main Body */}
         </AuthenticatedLayoutCustom>
     );
 }
