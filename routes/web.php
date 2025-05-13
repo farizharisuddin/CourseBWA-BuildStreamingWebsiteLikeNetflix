@@ -42,6 +42,10 @@ Route::prefix('custom')->group(function () {
     Route::get('/subscraptions-payments', function () {
         return Inertia::render('Costumize/SubscraptionsPayments');        
     })->name('custom.subscraptions-payments');
+    //details movie
+    Route::get('/movie/{slug}', function () {
+        return Inertia::render('Costumize/Movie/Show');        
+    })->name('custom.movie-show');
 });
 
 Route::get('/dashboard', function () {

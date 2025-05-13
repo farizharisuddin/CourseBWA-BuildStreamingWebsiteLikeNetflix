@@ -42,10 +42,10 @@ export default function Dashboard() {
                 </Flickity>
             </div>
             {/* End:Featured */}
-            {/* Start:Browse */}
+            {/* Start:Browse/MovieCard */}
             <div className="mt-[50px]">
                 <div className="font-semibold text-[22px] text-black mb-4">
-                    Browse
+                    Browse / Movie Card
                 </div>
                 <Flickity className="gap-[30px]" options={flickityOptions}>
                     {[1, 2, 3, 4, 5].map((item) => (
