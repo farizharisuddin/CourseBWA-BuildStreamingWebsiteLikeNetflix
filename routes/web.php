@@ -39,9 +39,9 @@ Route::prefix('custom')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Costumize/Dashboard');        
     })->name('custom.dashboard');    
-    Route::get('/subscraptions-payments', function () {
-        return Inertia::render('Costumize/SubscraptionsPayments');        
-    })->name('custom.subscraptions-payments');
+    Route::get('/subscriptions-payments', function () {
+        return Inertia::render('Costumize/SubscriptionsPayments');        
+    })->name('custom.subscriptions-payments');
     //details movie
     Route::get('/movie/{slug}', function () {
         return Inertia::render('Costumize/Movie/Show');        

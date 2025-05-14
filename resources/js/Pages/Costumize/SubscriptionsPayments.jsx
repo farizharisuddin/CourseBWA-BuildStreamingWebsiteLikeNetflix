@@ -1,10 +1,10 @@
-import SubscraptionsPaymentsCard from "@/Components/SubscraptionsPaymentsCard";
+import SubscriptionsPaymentsCard from "@/Components/SubscriptionsPaymentsCard";
 import AuthenticatedLayoutCustom from "@/Layouts/Costumize/AuthenticatedLayoutCustom";
 import { Head } from "@inertiajs/react";
-export default function SubscraptionsPayments() {
+export default function SubscriptionsPayments() {
     return (
         <AuthenticatedLayoutCustom>
-            <Head title="Subscraptions Payments"></Head>
+            <Head title="Subscriptions Payments"></Head>
 
             {/* Start Main Body */}
             <div className="py-0 flex flex-col items-center">
@@ -19,7 +19,7 @@ export default function SubscraptionsPayments() {
                 {/* Start:Pricing Card */}
                 <div className="flex justify-center gap-10 mt-[70px]">
                     {/* Premium */}
-                    <SubscraptionsPaymentsCard
+                    <SubscriptionsPaymentsCard
                         isPremium
                         name="Premium"
                         price={390000}
@@ -27,7 +27,7 @@ export default function SubscraptionsPayments() {
                         features={["Feature 1", "Feature 2", "Feature 3"]}
                     />
                     {/* Standart */}
-                    <SubscraptionsPaymentsCard
+                    <SubscriptionsPaymentsCard
                         isStandard
                         name="Standard"
                         price={290000}
@@ -35,7 +35,7 @@ export default function SubscraptionsPayments() {
                         features={["Feature 1", "Feature 2", "Feature 3"]}
                     />
                     {/* Basic */}
-                    <SubscraptionsPaymentsCard
+                    <SubscriptionsPaymentsCard
                         isBasic
                         name="Basic"
                         price={190000}
