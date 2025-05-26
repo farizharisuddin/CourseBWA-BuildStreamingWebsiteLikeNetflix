@@ -26,7 +26,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::redirect('/', '/login');
+Route::redirect('/', '/custom/login');
 
 Route::prefix('custom')->group(function () {
     Route::get('/login', function () {
