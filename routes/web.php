@@ -30,21 +30,21 @@ Route::redirect('/', '/custom/login');
 
 Route::prefix('custom')->group(function () {
     Route::get('/login', function () {
-        return Inertia::render('Costumize/Login');
+        return Inertia::render('Prototype/Login');
     })->name('custom.login');
     Route::get('/register', function () {
-        return Inertia::render('Costumize/Register');        
+        return Inertia::render('Prototype/Register');        
     })->name('custom.register');
 
     Route::get('/dashboard', function () {
-        return Inertia::render('Costumize/Dashboard');        
+        return Inertia::render('Prototype/Dashboard');        
     })->name('custom.dashboard');    
     Route::get('/subscriptions-payments', function () {
-        return Inertia::render('Costumize/SubscriptionsPayments');        
+        return Inertia::render('Prototype/SubscriptionsPayments');        
     })->name('custom.subscriptions-payments');
     //details movie
     Route::get('/movie/{slug}', function () {
-        return Inertia::render('Costumize/Movie/Show');        
+        return Inertia::render('Prototype/Movie/Show');        
     })->name('custom.movie-show');
 });
 
