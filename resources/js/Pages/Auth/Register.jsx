@@ -129,13 +129,13 @@ export default function Register() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <PrimaryButton>
+                                <PrimaryButton disabled={processing}>
                                     <span className="text-base font-semibold">
                                         Sign Up
                                     </span>
                                 </PrimaryButton>
                                 <Link
-                                    href={route("custom.login")}
+                                    href={route("login")}
                                     className="rounded-2xl border border-white py-[13px] text-center"
                                 >
                                     <span className="text-base text-white">
