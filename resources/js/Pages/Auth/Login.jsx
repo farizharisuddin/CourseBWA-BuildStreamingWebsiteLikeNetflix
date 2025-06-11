@@ -132,7 +132,7 @@ export default function Login({ status, canResetPassword }) {
                                     </span>
                                 </Link>
                                 <Link
-                                    href={route("custom.register")}
+                                    href={route("register")}
                                     className="rounded-2xl border border-white py-[13px] text-center"
                                 >
                                     <span className="text-base text-white">

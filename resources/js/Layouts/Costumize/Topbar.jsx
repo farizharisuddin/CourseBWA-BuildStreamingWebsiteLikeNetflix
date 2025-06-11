@@ -48,7 +48,7 @@ export default function Topbar({ name }) {
                             Dashboard
                         </Link>
                         <Link
-                            href="#!"
+                            href={route("profile.edit")}
                             className="transition-all hover:bg-sky-100 p-4"
                         >
                             Settings

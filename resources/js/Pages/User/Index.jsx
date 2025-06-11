@@ -3,7 +3,7 @@ import { Head } from "@inertiajs/react";
 import Flickity from "react-flickity-component";
 import FeaturedMovie from "@/Components/FeaturedMovie";
 import MovieCard from "@/Components/MovieCard";
-export default function Dashboard({ auth }) {
+export default function Dashboard({ auth, feturedMovies, movies }) {
     const flickityOptions = {
         cellAlign: "left",
         contain: true,
@@ -29,14 +29,14 @@ export default function Dashboard({ auth }) {
                     Featured Movies
                 </div>
                 <Flickity className="gap-[30px]" options={flickityOptions}>
-                    {[1, 2, 3, 4, 5].map((item) => (
+                    {feturedMovies.map((data) => (
                         <FeaturedMovie
-                            key={item}
-                            slug="featured-movie"
-                            name={`Test Name ${item}`}
-                            category="Action"
-                            thumbnail="https://picsum.photos/520/340"
-                            rating={Math.random() * 5}
+                            key={data.id}
+                            slug={data.slug}
+                            name={data.name}
+                            category={data.category}
+                            thumbnail={data.thumbnail}
+                            rating={data.rating}
                         />
                     ))}
                 </Flickity>
@@ -48,13 +48,13 @@ export default function Dashboard({ auth }) {
                     Browse / Movie Card
                 </div>
                 <Flickity className="gap-[30px]" options={flickityOptions}>
-                    {[1, 2, 3, 4, 5].map((item) => (
+                    {movies.map((data) => (
                         <MovieCard
-                            key={item}
-                            slug="browse-movie"
-                            name={`Browse Movie ${item}`}
-                            category={`Comedy`}
-                            thumbnail="https://picsum.photos/250/340"
+                            key={data.id}
+                            slug={data.slug}
+                            name={data.name}
+                            category={data.category}
+                            thumbnail={data.thumbnail}
                         />
                     ))}
                 </Flickity>
