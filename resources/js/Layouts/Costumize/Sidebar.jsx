@@ -83,7 +83,7 @@ export default function Sidebar() {
                     {/* Start:Others */}
                     <div>
                         <div className="text-gray-1 side-link mb-4">Others</div>
-                        <Link href={route("custom.subscriptions-payments")} className="side-link">
+                        <Link href={route("subscription-plan.index")} className="side-link">
                             <svg
                                 width="24"
                                 height="24"

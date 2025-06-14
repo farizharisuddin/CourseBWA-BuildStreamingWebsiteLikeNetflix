@@ -20,10 +20,10 @@ export default function SubscraptionsPaymentsCard({
                     {/* Top Content: Name-Price */}
                     <div>
                         <div className="flex justify-normal">
-                            <div className="bg-alerange rounded-full p-[13px] max-w-max">
+                            <div className="bg-alerange rounded-full p-[12px] max-w-max">
                                 <img
                                     src="/icons/ic_star.svg"
-                                    width="24"
+                                    width="14"
                                     alt=""
                                 />
                             </div>
@@ -32,8 +32,8 @@ export default function SubscraptionsPaymentsCard({
                         <div className="text-[28px] font-bold">
                             IDR {price.toLocaleString()}
                         </div>
-                        <p className="text-[#767676] text-xs font-light">
-                            /{durationInMonth} months
+                        <p className="text-white text-xs font-bold">
+                            / {durationInMonth} months
                         </p>
                     </div>
 
@@ -84,15 +84,15 @@ export default function SubscraptionsPaymentsCard({
             )}
             {/* Standart */}
             {isStandard && (
-                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-2 outline-alerange rounded-[26px] text-black w-[300px] ">
+                <div className="flex flex-col gap-[30px] py-[30px] px-7 outline outline-2 outline-alerange rounded-[26px] text-white w-[300px] bg-alerange">
                     {/* Top Content: Name-Price */}
                     <div>
                         <div className="text-sm mb-2">{name}</div>
                         <div className="text-[28px] font-bold">
                             IDR {price.toLocaleString()}
                         </div>
-                        <p className="text-gray-1 text-xs font-light">
-                            /{durationInMonth} months
+                        <p className="text-white text-xs font-bold">
+                            / {durationInMonth} months
                         </p>
                     </div>
 
@@ -111,7 +111,7 @@ export default function SubscraptionsPaymentsCard({
 
                     {/* Bottom: CTA Button */}
                     <div onClick={onSelectSubscription}>
-                        <PrimaryButton type="button" variant="white-outline">
+                        <PrimaryButton type="button" variant="white-outline bg-white">
                             <span className="text-base">Start {name}</span>
                         </PrimaryButton>
                     </div>
@@ -126,8 +126,8 @@ export default function SubscraptionsPaymentsCard({
                         <div className="text-[28px] font-bold">
                             IDR {price.toLocaleString()}
                         </div>
-                        <p className="text-gray-1 text-xs font-light">
-                            /{durationInMonth} months
+                        <p className="text-black text-xs font-bold">
+                            / {durationInMonth} months
                         </p>
                     </div>
 
