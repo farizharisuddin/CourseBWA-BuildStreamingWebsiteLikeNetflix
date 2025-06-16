@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoleTableSeeder::class,           
             UserTableSeeder::class,
-            SubscriptionsPlanSeeder::class,           
+            SubscriptionPlanSeeder::class,           
             MovieTableSeeder::class,           
         ]);
     }

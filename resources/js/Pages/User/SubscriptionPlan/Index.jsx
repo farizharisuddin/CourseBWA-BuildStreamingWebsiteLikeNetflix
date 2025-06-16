@@ -1,7 +1,14 @@
 import SubscriptionsPaymentsCard from "@/Components/SubscriptionsPaymentsCard";
 import AuthenticatedLayoutCustom from "@/Layouts/Costumize/AuthenticatedLayoutCustom";
-import { Head } from "@inertiajs/react";
+import { Head, router } from "@inertiajs/react";
 export default function SubscriptionsPayments({ auth, subscriptionPlans }) {
+    const selectSubscriptionPlan = (id) => {
+        router.post(
+            route("subscription-plan.UserSubscribe", {
+                subscriptionPlan: id,
+            })
+        );
+    };
     return (
         <AuthenticatedLayoutCustom auth={auth}>
             <Head title="Subscriptions Payments"></Head>
@@ -29,6 +36,9 @@ export default function SubscriptionsPayments({ auth, subscriptionPlans }) {
                             isPremium={data.name === "Premium"}
                             isStandard={data.name === "Standard"}
                             isBasic={data.name === "Basic"}
+                            onSelectSubscription={() =>
+                                selectSubscriptionPlan(data.id)
+                            }
                         />
                     ))}
                 </div>

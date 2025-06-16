@@ -21,6 +21,7 @@ Route::middleware(['auth', 'role:user'])->prefix('dashboard')->group(function ()
     Route::get('/movie/{movie:slug}', [MovieController::class, 'show'])->name('movie.show');
     //Subscription Plans
     Route::get('/subscription-plan', [SubscriptionPlanController::class, 'index'])->name('subscription-plan.index');
+    Route::post('/subscription-plan/{subscriptionPlan}/user-subscribe', [SubscriptionPlanController::class, 'UserSubscribe'])->name('subscription-plan.UserSubscribe');
     //Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
