@@ -1,3 +1,4 @@
+import SubscriptionDetails from "./SubscriptionDetails";
 import { Link } from "@inertiajs/react";
 export default function Sidebar() {
     return (
@@ -6,7 +7,10 @@ export default function Sidebar() {
                 <a href="/">
                     <img src="/images/moonton.svg" alt="" />
                 </a>
-                <div className="links flex flex-col mt-[60px] h-full gap-[50px]">
+                <div className="links flex flex-col mt-[10px] h-full gap-[10px]">
+                    
+                    <SubscriptionDetails />
+
                     {/* Start:Menu */}
                     <div>
                         <div className="text-gray-1 text-sm mb-4">Menu</div>
@@ -149,23 +153,7 @@ export default function Sidebar() {
                             Logout
                         </a>
                     </div>
-                    {/* End:Others */}
-
-                    {/* Start:Subscription details */}
-                    <div className="mt-auto pr-[30px]">
-                        <div className="p-5 bg-white rounded-[25px] outline outline-1 outline-[#f1f1f1]">
-                            <div className="text-black text-lg font-semibold mb-8">
-                                Basic
-                            </div>
-                            <div className="text-black text-sm mb-2">
-                                5 of 30 hari
-                            </div>
-                            <div className="rounded-full w-full h-[6px] bg-[#f1f1f1]">
-                                <div className="rounded-full h-full w-2/12 bg-alerange"></div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End:Subscription details */}
+                    {/* End:Others */}                    
                 </div>
             </div>
         </aside>
